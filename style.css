@@ -60,17 +60,16 @@ body {
   font-weight: bold; 
 }
 
-.content p {
-  color: var(--desaturated-blue); 
+.content .para {
+  color: var(--desaturated-blue);
+  margin-bottom: 1.5rem;
 }
 
 .profile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem; 
-  margin-bottom: 1.5rem; 
+  align-items: center; 
 }
 
 .profile .avatar {
@@ -116,4 +115,43 @@ body {
 
 .popup {
   display: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 1440px) {
+  .main-container {
+    width: 800px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero {
+    flex: 3; 
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .content {
+    flex: 4; 
+  }
+
+  .profile .author {
+    margin-left: -10%;
+  }
+
+  .profile .social {
+    margin-right: -8%;
+  }
 }
