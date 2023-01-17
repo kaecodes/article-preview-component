@@ -70,6 +70,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; 
+  position: relative; 
 }
 
 .profile .avatar {
@@ -114,8 +115,45 @@ body {
 }
 
 .popup {
-  display: none;
+  visibility: hidden;  
+  position: absolute; 
+  bottom: 130%; 
+  left: 78%; 
+  background: var(--dark-grayish-blue); 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; 
+  padding: 0.7rem 1.5rem; 
+  border-radius: 0.5rem;
+  font-size: 8px;
 }
+
+.popup p {
+  color: var(--grayish-blue); 
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.popup img {
+  width: 15px; 
+}
+
+.popup:after {
+  content: ''; 
+  position: absolute; 
+  bottom: 0; 
+  left: 50%; 
+  width: 0;
+  height: 0;
+  border: 15px solid transparent; 
+  border-top-color: var(--dark-grayish-blue);
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -14px;
+}
+
 
 /* Media Queries */
 
